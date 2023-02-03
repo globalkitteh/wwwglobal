@@ -1,7 +1,5 @@
 let fft
 
-global = 1 // set design to my theming
-
 let Particle = function (position) {
   this.position = position
   this.speed = createVector(0, random(0, 100) / 10)
@@ -18,7 +16,9 @@ let Particle = function (position) {
     }
     this.diameter = (this.position.y * (random(5, 7) + energy * 200)) / 1000 + 2
 
-    this.color = [this.color[1] + 100, this.color[1], this.color[2]] // make color more purple
+    this.color = [this.color[0]+(1000*energy)-10, this.color[1], this.color[2]] // make color more purple
+
+    // console.log(energy)
   }
 }
 
